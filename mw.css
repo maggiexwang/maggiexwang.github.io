@@ -36,25 +36,33 @@ a:hover {
 }
 
 .nav {
-  max-width: 900px;
+  max-width: 1100px;       /* wider container */
   margin: 0 auto;
-  padding: 0.75rem 1.25rem;
+  padding: 0.9rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;   /* <-- keeps name left, links right */
 }
 
+/* Your name / brand */
 .nav-brand a {
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-weight: 800;         /* BOLDER than nav links */
+  font-size: 1.35rem;       /* Larger */
   color: var(--brg);
+  letter-spacing: 0.3px;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;              /* spacing between Home, CV */
 }
 
 .nav-links a {
-  margin-left: 1.25rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--brg);
   opacity: 0.85;
+  font-weight: 500;         /* lighter than your name */
 }
 
 .nav-links a:hover {
@@ -62,8 +70,7 @@ a:hover {
 }
 
 .nav-links a.active {
-  font-weight: 700;
-  color: var(--brg);
+  font-weight: 600;
   opacity: 1;
 }
 
