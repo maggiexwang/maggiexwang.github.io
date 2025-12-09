@@ -1,50 +1,109 @@
+/* ---------- Base ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   line-height: 1.6;
-  background: #fafafa;
+  background: #f5f5f7;
   color: #222;
 }
 
-/* Navigation bar */
-header {
-  background: white;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 0.75rem 0;
+/* British Racing Green */
+:root {
+  --brg: #004225;
 }
 
-nav {
+a {
+  color: var(--brg);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Header / Nav ---------- */
+
+.site-header {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0.75rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.nav-brand a {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--brg);
+}
+
 .nav-links a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #004aad;
-  font-weight: 500;
+  margin-left: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--brg);
+  opacity: 0.85;
+}
+
+.nav-links a:hover {
+  opacity: 1;
 }
 
 .nav-links a.active {
   font-weight: 700;
+  color: var(--brg);
+  opacity: 1;
 }
 
-/* Page content area */
+/* ---------- Main content card ---------- */
+
 .content {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 760px;
+  margin: 2.75rem auto 3.5rem;
+  padding: 0 1.25rem;
 }
 
-/* Profile layout */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2.5rem 2.4rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- Typography ---------- */
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--brg);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Profile layout (home) ---------- */
+
 .profile {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.75rem;
   align-items: flex-start;
 }
 
@@ -53,17 +112,69 @@ nav {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #e0e0e0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border: 3px solid var(--brg);
 }
 
 .profile-text {
   flex: 1;
-  min-width: 250px;
+  min-width: 240px;
 }
 
-footer {
+/* ---------- Buttons (if you add any later) ---------- */
+
+.button {
+  display: inline-block;
+  background: var(--brg);
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+/* ---------- CV page ---------- */
+
+.cv-frame {
+  width: 100%;
+  height: 75vh;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
   text-align: center;
-  padding: 2rem 0;
-  color: #777;
+  padding: 2rem 0 2.5rem;
+  color: #666;
   font-size: 0.85rem;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
 }
