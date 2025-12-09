@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-brand">Your Name</div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="cv.html">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="profile">
+      <!-- Optional photo — delete this <img> if not using -->
+      <img src="img/profile.jpg" alt="Your photo" class="profile-photo" />
+
+      <div class="profile-text">
+        <h1>Your Name</h1>
+        <p><strong>Position</strong><br>Department, University</p>
+
+        <p>
+          Short bio goes here. One or two paragraphs about your research,
+          interests, dissertation, or job market status.
+        </p>
+
+        <p>
+          <strong>Email:</strong> your.email@uchicago.edu<br>
+          <strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Your Name
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
