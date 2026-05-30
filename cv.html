@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maggie Xiaonan Wang – CV</title>
+  <link rel="stylesheet" href="mw.css" />
+  <style>
+    iframe {
+      width: 100%;
+      height: 95vh; /* nearly full screen */
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+  <nav class="nav">
+    <div class="nav-brand">
+      <a href="index.html">Maggie Xiaonan Wang</a>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cv.html" class="active">CV</a>
+    </div>
+  </nav>
+  </header>
+
+  <iframe src="mxwang_cv_202603.pdf"></iframe>
+
+  <footer>
+    © <span id="year"></span> Maggie Xiaonan Wang
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
